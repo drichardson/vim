@@ -3937,14 +3937,7 @@ mch_system_classic(char *cmd, int options)
     si.lpDesktop = NULL;
     si.lpTitle = NULL;
     si.dwFlags = STARTF_USESHOWWINDOW;
-    /*
-     * It's nicer to run a filter command in a minimized window.
-     * Don't activate the window to keep focus on Vim.
-     */
-    if (options & SHELL_DOOUT)
-	si.wShowWindow = SW_SHOWMINNOACTIVE;
-    else
-	si.wShowWindow = SW_SHOWNORMAL;
+    si.wShowWindow = SW_SHOWNORMAL;
     si.cbReserved2 = 0;
     si.lpReserved2 = NULL;
 
