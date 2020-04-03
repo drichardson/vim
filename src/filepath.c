@@ -13,6 +13,7 @@
 
 #include "vim.h"
 
+static int MYCOUNTER;
 #ifdef MSWIN
 /*
  * Functions for ":8" filename modifier: get 8.3 version of a filename.
@@ -2821,7 +2822,13 @@ expand_wildcards(
     char_u	*p;
     int		non_suf_match;	// number without matching suffix
 
+    MYCOUNTER=0;
     retval = gen_expand_wildcards(num_pat, pat, num_files, files, flags);
+
+    char_u buf[1000];
+    sprintf(buf, "MYCOUNTER: %d", MYCOUNTER);
+    //emsg(_("E163: There is only one file to edit"));
+    emsg(buf);
 
     // When keeping all matches, return here
     if ((flags & EW_KEEPALL) || retval == FAIL)
@@ -3155,7 +3162,10 @@ dos_expandpath(
     STRCPY(s, "*.*");
     wn = enc_to_utf16(buf, NULL);
     if (wn != NULL)
+    {
 	hFind = FindFirstFileW(wn, &wfb);
+	MYCOUNTER++;
+    }
     ok = (hFind != INVALID_HANDLE_VALUE);
 
     while (ok)
