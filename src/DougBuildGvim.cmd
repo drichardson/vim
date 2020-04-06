@@ -1,0 +1,2 @@
+
+DougBuild.cmd GUI=yes %*

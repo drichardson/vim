@@ -1016,7 +1016,7 @@ TOOLS = xxd/xxd$(EXEEXT)
 ### prefix	the top directory for the data (default "/usr/local")
 #
 # Uncomment the next line to install Vim in your home directory.
-#prefix = $(HOME)
+prefix = $(HOME)/code/viminstall
 
 ### exec_prefix	is the top directory for the executable (default $(prefix))
 #

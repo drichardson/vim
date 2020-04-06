@@ -1,0 +1,3 @@
+
+DougBuild.cmd GUI=NO %*
+
