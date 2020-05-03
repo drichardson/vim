@@ -331,7 +331,7 @@ CClink = $(CC)
 # Uncomment this line when you don't want to get the GUI version, although you
 # have GTK, Motif and/or Athena.  Also use --without-x if you don't want X11
 # at all.
-#CONF_OPT_GUI = --disable-gui
+CONF_OPT_GUI = --disable-gui
 
 # Uncomment one of these lines if you have that GUI but don't want to use it.
 # The automatic check will use another one that can be found.
@@ -447,7 +447,7 @@ CClink = $(CC)
 #CONF_OPT_PYTHON = --enable-pythoninterp
 #CONF_OPT_PYTHON = --enable-pythoninterp --with-python-command=python2.7
 #CONF_OPT_PYTHON = --enable-pythoninterp=dynamic
-#CONF_OPT_PYTHON3 = --enable-python3interp
+CONF_OPT_PYTHON3 = --enable-python3interp
 #CONF_OPT_PYTHON3 = --enable-python3interp --with-python3-command=python3.6
 #CONF_OPT_PYTHON3 = --enable-python3interp=dynamic
 
@@ -547,7 +547,7 @@ CClink = $(CC)
 # Also disable the GUI above, otherwise it will be included anyway.
 # When both GUI and X11 have been disabled this may save about 15% of the
 # code and make Vim startup quicker.
-#CONF_OPT_X = --without-x
+CONF_OPT_X = --without-x
 
 # X WINDOWS DIRECTORY - specify X directories
 # If configure can't find you X stuff, or if you have multiple X11 derivatives
@@ -1016,7 +1016,7 @@ TOOLS = xxd/xxd$(EXEEXT)
 ### prefix	the top directory for the data (default "/usr/local")
 #
 # Uncomment the next line to install Vim in your home directory.
-prefix = $(HOME)/code/viminstall
+prefix = $(HOME)/opt
 
 ### exec_prefix	is the top directory for the executable (default $(prefix))
 #
