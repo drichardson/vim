@@ -9,6 +9,11 @@
     .\DougBuildAll.cmd clean
     .\DougInstall.cmd
 
+You can also test with
+
+    .\DougBuildAll.cmd test
+
+
 
 # Changing Build Parameters
 
