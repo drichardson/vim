@@ -12,5 +12,8 @@
 
 # Changing Build Parameters
 
-To make changes, you need to change Make_mvc.make for Windows and Makefile for
-Linux.
+To make changes, you need to change:
+
+- DougBuild.cmd, DougBuildGvim.cmd, or DougBuildVim.cmd for Windows
+- Makefile for Linux
+
